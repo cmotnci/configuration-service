@@ -1,0 +1,37 @@
+---
+spring:
+  profiles:
+    active: dev
+### Default Properties
+
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    show-sql: false
+    database-platform: org.hibernate.dialect.MySQLDialect
+
+server:
+  port: 8080
+
+hikarids:
+  connectionTimeout: 10000
+  maxPoolSize: 10
+  poolName: hikaridp
+---
+# Dev Profile
+spring:
+  profiles: dev
+
+hikarids:
+  jdbcUrl: jdbc:mysql://localhost:3306/tyol
+  username: root
+  password: root
+---
+# Prod Profile
+spring:
+  profiles: prod
+
+hikarids:
+  jdbcUrl:
+  username:
+  password:

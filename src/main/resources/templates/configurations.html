@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Configuration Records</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+</head>
+<body>
+
+
+<p th:if="${configurations != null}">
+<table>
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Value</th>
+        <th>Status</th>
+        <th>applicationName</th>
+    </tr>
+    <tr th:each="configuration : ${configurations}">
+        <td th:text="${configuration.id}">Id</td>
+        <td th:text="${configuration.name}">Name</td>
+        <td th:text="${configuration.type}">Type</td>
+        <td th:text="${configuration.value}">Value</td>
+        <td th:text="${configuration.status}">Status</td>
+        <td th:text="${configuration.applicationName}">Aplication Name</td>
+    </tr>
+</table>
+</p>
+
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Configuration Service</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+</head>
+<body>
+
+<form action="/configurations/active" method="get">
+    Application Name : <input type="text" name="applicationName"><br>
+    <input type="submit" value="List Configurations">
+</form>
+
+
+<br>
+<form action="/configurations/add" method="post">
+    Name : <input type="text" name="name"><br>
+    Type : <input type="text" name="type"><br>
+    Value : <input type="text" name="value"><br>
+    Status : <input type="text" name="status"><br>
+    Application Name : <input type="text" name="applicationName"><br>
+    <input type="submit" value="Add Configuration">
+</form>
+
+<br>
+<form action="/configurations/update" method="post">
+    Id : <input type="text" name="id"><br>
+    Name : <input type="text" name="name"><br>
+    Type : <input type="text" name="type"><br>
+    Value : <input type="text" name="value"><br>
+    Status : <input type="text" name="status"><br>
+    Application Name : <input type="text" name="applicationName"><br>
+    <input type="submit" value="Update Configuration">
+</form>
+
+</body>
+</html>
